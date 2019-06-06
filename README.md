@@ -7,6 +7,6 @@
 * **Includes** - included files such as bootstrap and themes.
 * **index.php** - central route handler and view outlet.
 
-## Forumn
+## Forumn requirements
 * Must have confirmed email address to post
 * Cannot post a discussion if you've posted one in the last 5 minutes.
