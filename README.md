@@ -5,6 +5,8 @@ slei.pro is based off a C# console program written in 2015 that ran on windows c
 
 This project is a prototype of the slei.pro project written in PHP with an MVC pattern and styled with bootstrap.
 
+NOTE: Currently, this project is publicly listed on GitHub with the database credentials visible. This decision was made because the database configuration is temporary. The completed version will have secured database credentials.
+
 ## File & directory structure
 * **Models** - abstractions of db and data models, db actions e.g queries.
 * **Views** - html code with bootstrap css.
