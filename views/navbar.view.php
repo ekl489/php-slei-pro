@@ -11,4 +11,19 @@
   <li class="nav-item">
     <a class="nav-link" href="/play">Play</a>
   </li>
+  <li class="nav-item" <?php if(!$clientSession->isLoggedIn()){ echo 'styles="display: none;"'; }?>>
+    <a class="nav-link" href="/login">Login</a>
+  </li>
+  <li class="nav-item" <?php if(!$clientSession->isLoggedIn()){ echo 'styles="display: none;"'; }?>>
+    <a class="nav-link" href="/account">Account</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/account">
+      LoggedIn: <?php echo $clientSession->isLoggedIn() ? 'YES' : 'NO'; ?>
+    </a>
+  </li>
+  
 </ul>
+
+
+

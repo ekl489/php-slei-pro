@@ -1,5 +1,9 @@
 <?php
     $title = "Slei.pro";
+
+    // setup ClientSession
+    require_once 'models/users.model.php';
+    $clientSession = new ClientSession($dbconnection);
 ?>
 
 <!DOCTYPE html>
@@ -10,17 +14,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- includes -->
-    <link rel="stylesheet" href="inclues/bootstap/bootstrap.min.css">
-    <script src="inclues/bootstap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/includes/bootstap/bootstrap.min.css">
+    <script src="incldues/bootstap/bootstrap.min.js"></script>
     <link rel="stylesheet" href="includes/bootswatch/bootstrap.min.css">
-    <link rel="stylesheet" href="includes/custom/styles.css">
+    <link rel="stylesheet" href="/includes/custom/styles.css">
 
     <title><?php echo $title; ?></title>
 </head>
 <body>
 
     <!-- Navbar -->
-    <?php include 'views/navbar.view.php'; ?>
+    <?php require_once 'views/navbar.view.php'; ?>
     <div style="margin-bottom: 1rem;"></div>
 
     <!-- Page body -->
@@ -33,6 +37,8 @@
             require __DIR__ . '/controllers/forumn.controller.php';
         } else if(substr($request, 0, 5) == '/play') {
             require __DIR__ . '/controllers/play.controller.php';
+        } else if(substr($request, 0, 6) == '/login') {
+            require 'controllers/login.controller.php';
         } else {
             require __DIR__ . '/controllers/404.controller.php';
         }
